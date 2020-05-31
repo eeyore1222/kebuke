@@ -1,4 +1,6 @@
-  
+$green: #49aa45;
+$gray333: #333333;
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,12 @@
     background-image: url(./img/banner.png);
     width: 1920px;
     height: 1280px;
+    display: grid;
+    align-items: center;
+
+    img {
+        margin: 0 auto;
+    }
 }
 
 nav {
@@ -30,15 +38,80 @@ nav {
         #link{
             display: grid;
             grid-template-columns: repeat(3,1fr);
+            // 垂直對齊:底線
+            align-items: flex-end;
 
             a {
                 font-size: 18px;
                 font-weight: 100;
+                /*個別設定位置 
+                &:nth-child(2){
+                    text-align:center;
+                }
+                &:nth-child(3){
+                    text-align:right;
+                }
+                */
             }
         }
         #social {
             display: grid;
             grid-template-columns: repeat(2,1fr);
+            align-items: flex-end;
+            
+            &:nth-child(2){
+                text-align:right;
+            }
+        }
+    }
+}
+#contant{
+    width: 1920px;
+    background-image: url(./img/paper.png);
+    /*加邊框讓背景不會一起動*/ 
+    border: 0.1px solid rgba(0, 0, 0, 0);
+
+    h1 {
+        text-align: center;
+        margin-top: 46px;
+        font-weight: 300;
+        letter-spacing: 9.6px;
+        font-size: 32px;
+    }
+    #news {
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+
+        div{
+            background-color: white;
+            padding: 40px 30px;
+
+            h3{
+                color: $green;
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 3.6px;
+                text-align: center;
+                margin-bottom: 27px;
+            }
+            h4{
+                font-size: 22px;
+                font-weight: bold;
+                letter-spacing: 5.5px;
+                text-align: center;
+            }
+            p{
+               color: $gray333;
+               font-size: 16px;
+               font-weight: 300;
+               line-height: 1.88;
+               letter-spacing: 4.8px;
+               margin: 28px 0 31px; 
+            }
+
         }
     }
 }
