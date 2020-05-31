@@ -109,6 +109,11 @@ nav {
                 letter-spacing: 5.5px;
                 text-align: center;
             }
+            hr {
+                border: 0.5px solid #000;
+                width: 0;
+                transition: 0.5s;
+            }
             p{
                color: $gray333;
                font-size: 16px;
@@ -117,7 +122,35 @@ nav {
                letter-spacing: 4.8px;
                margin: 28px 0 31px; 
             }
+            // 包覆住圖片的 div 並用來製作半透明黑色區塊 - 相對定位
+            div {
+                position: relative;
+                font-size: 0;
+            }
+            // 偽元素：填滿圖片半透明黑色區塊 - 絕對定位
+            div::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                z-index: 1;
+                opacity: 0;
+                transition: 0.5s;
+            }
+            // 圖片填滿 div 避免間隙
+            img {
+                width: 100%;
+            }
 
+            &:hover {
+                hr {
+                    width: 100%;
+                }
+                div::before {
+                    opacity: 0.5;
+                }
+            }
         }
     }
     // 推薦飲品
