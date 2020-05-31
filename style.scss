@@ -11,12 +11,34 @@
     width: 1920px;
     height: 1280px;
 }
+
 nav {
     position: fixed;
+    width:1920px;
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
     #box {
         margin: 59px auto 0;
-        width:1200px;
-        display:grid;
-        grid-template-columns: 204px 351px;
+        width: 1200px;
+        display: grid;
+        grid-template-columns: 204px 351px 398px 120px 110px;
+
+        #link{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+
+            a {
+                font-size: 18px;
+                font-weight: 100;
+            }
+        }
+        #social {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
     }
 }

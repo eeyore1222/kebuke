@@ -15,6 +15,12 @@
 
 nav {
   position: fixed;
+  width: 1920px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
 }
 
 nav #box {
@@ -22,7 +28,26 @@ nav #box {
   width: 1200px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 204px 351px;
-      grid-template-columns: 204px 351px;
+  -ms-grid-columns: 204px 351px 398px 120px 110px;
+      grid-template-columns: 204px 351px 398px 120px 110px;
+}
+
+nav #box #link {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+nav #box #link a {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+nav #box #social {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
 }
 /*# sourceMappingURL=style.css.map */
